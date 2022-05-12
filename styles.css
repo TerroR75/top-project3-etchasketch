@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+/* GAMESCREEN */
+.gamescreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    flex: 1 1 auto;
+}
+
+/* panels */
+.left-panel,
+.right-panel {
+    flex: 1 1 auto;
+    height: 100%;
+}
+
+.left-panel {
+    background-color: aqua;
+}
+
+.right-panel {
+    background-color: blueviolet;
+}
+
+
+/* FOOTER */
+.footer {
+    /* margin-top: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
