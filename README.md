@@ -10,6 +10,8 @@ Live preview: https://terror75.github.io/top-project3-etchasketch/
 - Selecting pixel amount
 - Clearing drawing area
 - Drawing (dragging and clicking)
+- Color picking
+- Eraser tool
 
 
 ## Authors
