@@ -15,4 +15,3 @@ Live preview: https://terror75.github.io/top-project3-etchasketch/
 ## Authors
 
 - [@TerroR75](https://github.com/TerroR75)
-- [@The Odin Project](https://www.theodinproject.com)
