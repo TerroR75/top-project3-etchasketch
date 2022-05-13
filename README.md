@@ -1,6 +1,6 @@
 # TOP #3 - Etch a Sketch
 
-Simple "Etch a Sketch" drawing game.
+Simple "Etch a Sketch" drawing game. Lots of DOM manipulation practice.
 
 Live preview: https://terror75.github.io/top-project3-etchasketch/
 
