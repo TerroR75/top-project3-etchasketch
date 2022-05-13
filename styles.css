@@ -135,3 +135,10 @@ label[for=tileSize] {
 
 
 /* UTILS */
+.fa-github {
+    transition: transform 500ms ease;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.3);
+}
