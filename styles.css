@@ -27,16 +27,27 @@ body {
 /* panels */
 .left-panel,
 .right-panel {
-    flex: 1 1 auto;
+    /* flex: 1 1 auto; */
     height: 100%;
 }
 
 .left-panel {
     background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .right-panel {
     background-color: blueviolet;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 0;
 }
 
 
@@ -47,4 +58,12 @@ body {
     justify-content: center;
     align-items: center;
     background-color: bisque;
+}
+
+
+/* GRID */
+.gridtile {
+    border: 1px solid;
+    margin: 0;
+    position: absolute;
 }
