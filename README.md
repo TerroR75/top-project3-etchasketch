@@ -12,6 +12,7 @@ Live preview: https://terror75.github.io/top-project3-etchasketch/
 - Drawing (dragging and clicking)
 - Color picking
 - Eraser tool
+- Dark/Light theme choice
 
 
 ## Authors
