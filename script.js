@@ -1,17 +1,27 @@
+// general selectors
 const gridPanel = document.querySelector('.right-panel');
+const changeThemeBtn = document.querySelector('.changeTheme');
+const mainHeader = document.querySelector('.header');
+const mainFooter = document.querySelector('.footer');
+const gameScreen = document.querySelector('.gamescreen');
 
-// range input
+// range input selectors
 const rangeInput = document.querySelector('.rangeInput');
 const rangeInputText = document.querySelector('.rangeInputContainer>p');
 
-// clear input
+// clear input selectors
 const clearBtn = document.querySelector('.clearBtn');
 
 // INITAL
 createTiles();
+
 let isMouseDown = false;
 document.body.onmousedown = () => isMouseDown = true;
 document.body.onmouseup = () => isMouseDown = false;
+
+// THEME
+let darkTheme = false;
+let tileColor = 'black';
 
 
 // EVENTS
@@ -22,6 +32,8 @@ rangeInput.addEventListener('change', () => {
 });
 
 clearBtn.addEventListener('click', clearTiles);
+
+changeThemeBtn.addEventListener('click', changeTheme);
 
 
 
@@ -53,12 +65,74 @@ function updateText(element, text) {
 
 function changeTileColor(e) {
     if (e.type === 'mouseover' && !isMouseDown) return;
-    this.style.backgroundColor = 'black';
+    this.style.backgroundColor = tileColor;
 }
 
 function clearTiles() {
     let tiles = document.querySelectorAll('.gridtile');
     for (let tile of tiles) {
         tile.style.backgroundColor = 'inherit';
+    }
+}
+
+function changeTheme() {
+    if (!darkTheme) {
+        changeExisitngTilesColor('white');
+        tileColor = 'white';
+        mainHeader.style.backgroundColor = 'var(--DarkTheme-secondary-color)';
+        mainHeader.style.color = 'var(--DarkTheme-primary-text-color)';
+
+        gameScreen.style.backgroundColor = 'var(--DarkTheme-primary-color)';
+        gameScreen.style.color = 'var(--DarkTheme-primary-text-color)';
+
+        mainFooter.style.backgroundColor = 'var(--DarkTheme-secondary-color)';
+        mainFooter.style.color = 'var(--DarkTheme-primary-text-color)';
+
+
+
+        darkTheme = true;
+        changeThemeIcon(darkTheme);
+    } else {
+        changeExisitngTilesColor('black');
+
+
+        tileColor = 'black';
+        mainHeader.style.backgroundColor = 'var(--LightTheme-secondary-color)';
+        mainHeader.style.color = 'var(--LightTheme-primary-text-color)';
+
+        gameScreen.style.backgroundColor = 'var(--LightTheme-primary-color)';
+        gameScreen.style.color = 'var(--LightTheme-primary-text-color)';
+
+        mainFooter.style.backgroundColor = 'var(--LightTheme-secondary-color)';
+        mainFooter.style.color = 'var(--LightTheme-primary-text-color)';
+
+
+
+
+
+        darkTheme = false;
+        changeThemeIcon(darkTheme);
+    }
+}
+
+function changeThemeIcon(isDarkTheme) {
+    const themeIcon = document.querySelector('.changeTheme');
+    if (isDarkTheme) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
+    else {
+        themeIcon.classList.add('fa-moon');
+        themeIcon.classList.remove('fa-sun');
+    }
+
+}
+
+function changeExisitngTilesColor(color) {
+    let tiles = document.querySelectorAll('.gridtile');
+    for (let tile of tiles) {
+        if (tile.style.backgroundColor !== '') {
+            tile.style.backgroundColor = color;
+        }
     }
 }
