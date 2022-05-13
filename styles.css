@@ -16,6 +16,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: space-between;
+
+    font-family: 'VT323', monospace;
 }
 
 /* HEADER */
@@ -33,6 +35,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 3rem;
 }
 
 .changeTheme {
@@ -76,6 +79,7 @@ body {
 .rangeInputContainer>p {
     text-align: center;
     user-select: none;
+    font-size: 2rem;
 }
 
 label[for=tileSize] {
@@ -119,6 +123,7 @@ label[for=tileSize] {
     background-color: var(--LightTheme-secondary-color);
     color: var(--LightTheme-primary-text-color);
     gap: 5px;
+    font-size: 20px;
 }
 
 
