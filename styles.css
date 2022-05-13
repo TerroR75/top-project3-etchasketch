@@ -65,5 +65,5 @@ body {
 .gridtile {
     border: 1px solid;
     margin: 0;
-    position: absolute;
+    box-sizing: border-box;
 }
