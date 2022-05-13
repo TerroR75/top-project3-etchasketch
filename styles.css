@@ -31,16 +31,30 @@ body {
     height: 100%;
 }
 
+/* left panel */
 .left-panel {
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.rangeInputContainer>p {
+    text-align: center;
+    user-select: none;
+}
+
+label[for=tileSize] {
+    user-select: none;
+}
+
+.clearBtn {
+    user-select: none;
+}
+
+/* right panel */
 .right-panel {
-    background-color: blueviolet;
     height: 500px;
     width: 500px;
     display: flex;
@@ -48,6 +62,7 @@ body {
     align-content: flex-start;
     justify-content: flex-start;
     padding: 0;
+    border: 1px solid;
 }
 
 
@@ -63,7 +78,9 @@ body {
 
 /* GRID */
 .gridtile {
-    border: 1px solid;
+    /* border: 1px solid; */
     margin: 0;
     box-sizing: border-box;
+    user-select: none;
+
 }
