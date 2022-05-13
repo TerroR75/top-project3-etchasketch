@@ -91,6 +91,7 @@ function clearTiles() {
 }
 
 function changeTheme() {
+    let buttons = document.querySelectorAll('.btn');
     if (!darkTheme) {
         changeExisitngTilesColor('white');
         tileColor = 'white';
@@ -102,6 +103,12 @@ function changeTheme() {
 
         mainFooter.style.backgroundColor = 'var(--DarkTheme-secondary-color)';
         mainFooter.style.color = 'var(--DarkTheme-primary-text-color)';
+
+
+        for (let button of buttons) {
+            button.style.borderColor = 'white';
+            button.style.color = 'white';
+        }
 
 
 
@@ -122,7 +129,10 @@ function changeTheme() {
         mainFooter.style.color = 'var(--LightTheme-primary-text-color)';
 
 
-
+        for (let button of buttons) {
+            button.style.borderColor = 'black';
+            button.style.color = 'black';
+        }
 
 
         darkTheme = false;
