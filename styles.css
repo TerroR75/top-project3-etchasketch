@@ -74,6 +74,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 .rangeInputContainer>p {
@@ -135,6 +136,11 @@ label[for=tileSize] {
 
 
 /* UTILS */
+.btn {
+    background-color: inherit;
+    padding: 3px 20px;
+}
+
 .fa-github {
     transition: transform 500ms ease;
 }
