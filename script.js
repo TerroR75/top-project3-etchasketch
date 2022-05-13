@@ -9,8 +9,12 @@ const gameScreen = document.querySelector('.gamescreen');
 const rangeInput = document.querySelector('.rangeInput');
 const rangeInputText = document.querySelector('.rangeInputContainer>p');
 
-// clear input selectors
+// color selector
+const colorPicker = document.querySelector('.colorPicker');
+
+// button selectors
 const clearBtn = document.querySelector('.clearBtn');
+const eraserBtn = document.querySelector('.eraserBtn');
 
 // INITAL
 createTiles();
@@ -32,8 +36,11 @@ rangeInput.addEventListener('change', () => {
 });
 
 clearBtn.addEventListener('click', clearTiles);
+eraserBtn.addEventListener('click', eraserTool);
+colorPicker.addEventListener('change', changeColor);
 
 changeThemeBtn.addEventListener('click', changeTheme);
+
 
 
 
@@ -47,8 +54,8 @@ function createTiles(tileNumber = 2) {
         tile.style.height = `${tileSize}px`;
         tile.style.transform = `translate(${tileSize})`;
         tile.classList.add('gridtile');
-        tile.addEventListener('mouseover', changeTileColor);
-        tile.addEventListener('mousedown', changeTileColor);
+        tile.addEventListener('mouseover', paintTile);
+        tile.addEventListener('mousedown', paintTile);
         gridPanel.appendChild(tile);
     }
 
@@ -63,9 +70,17 @@ function updateText(element, text) {
     element.textContent = text;
 }
 
-function changeTileColor(e) {
+function paintTile(e) {
     if (e.type === 'mouseover' && !isMouseDown) return;
     this.style.backgroundColor = tileColor;
+}
+
+function changeColor() {
+    tileColor = colorPicker.value;
+}
+
+function eraserTool() {
+    tileColor = 'inherit';
 }
 
 function clearTiles() {
