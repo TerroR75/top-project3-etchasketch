@@ -1,3 +1,14 @@
+:root {
+    --LightTheme-primary-color: aliceblue;
+    --LightTheme-secondary-color: rgb(216, 227, 236);
+    --LightTheme-primary-text-color: rgb(19, 18, 18);
+
+
+    --DarkTheme-primary-color: rgb(46, 46, 46);
+    --DarkTheme-secondary-color: rgb(32, 32, 32);
+    --DarkTheme-primary-text-color: rgb(228, 222, 222);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,18 +21,41 @@ body {
 /* HEADER */
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    font-size: 4rem;
+    background-color: var(--LightTheme-secondary-color);
+    color: var(--LightTheme-primary-text-color);
+    padding: 1rem 1rem;
+}
+
+.header>h1 {
+    flex: 0 1 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.changeTheme {
+    margin-left: auto;
+    flex: 0 1 auto;
+    transform: scale(2);
+    transition: all 100ms ease;
+}
+
+.changeTheme:hover {
+    cursor: pointer;
+    transform: scale(2.4);
 }
 
 /* GAMESCREEN */
 .gamescreen {
+    user-select: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aliceblue;
+    background-color: var(--LightTheme-primary-color);
     flex: 1 1 auto;
+    gap: 5%;
 }
 
 /* panels */
@@ -33,7 +67,6 @@ body {
 
 /* left panel */
 .left-panel {
-    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,6 +84,7 @@ label[for=tileSize] {
 
 .clearBtn {
     user-select: none;
+    padding: 0.2rem 1rem;
 }
 
 /* right panel */
@@ -65,17 +99,6 @@ label[for=tileSize] {
     border: 1px solid;
 }
 
-
-/* FOOTER */
-.footer {
-    /* margin-top: auto; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: bisque;
-}
-
-
 /* GRID */
 .gridtile {
     /* border: 1px solid; */
@@ -84,3 +107,26 @@ label[for=tileSize] {
     user-select: none;
 
 }
+
+
+
+/* FOOTER */
+.footer {
+    /* margin-top: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--LightTheme-secondary-color);
+    color: var(--LightTheme-primary-text-color);
+    gap: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* UTILS */
