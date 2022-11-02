@@ -4,6 +4,12 @@ Simple "Etch a Sketch" drawing game. Lots of DOM manipulation practice.
 
 Live preview: https://terror75.github.io/top-project3-etchasketch/
 
+## What I learned
+
+- More DOM manipulation
+- More mouse events
+- Positioning elements
+- Appending elements using javascript
 
 ## Features
 
@@ -13,7 +19,6 @@ Live preview: https://terror75.github.io/top-project3-etchasketch/
 - Color picking
 - Eraser tool
 - Dark/Light theme choice
-
 
 ## Authors
 
